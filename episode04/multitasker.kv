@@ -1,0 +1,50 @@
+<MyGrid>:
+
+    title1: title1
+    title2: title2
+    title3: title3
+
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height -200
+        pos: 100, 100
+
+        GridLayout:
+            cols:3
+
+            Label:
+                text: "00:00: "
+
+            TextInput:
+                id: title1
+                multiline:False
+
+            Button:
+                text:"Submit"
+                on_press: root.btn1()
+
+            Label:
+                text: "00:00 "
+
+            TextInput:
+                id: title2
+                multiline:False
+
+            Button:
+                text:"Submit"
+                on_press: root.btn2()
+
+
+            Label:
+                text: "00:00"
+
+            TextInput:
+                id: title3
+                multiline:False
+
+            Button:
+                text:"Submit"
+                on_press: root.btn3()
+
+        Label:
+            text: "Log messages here."
