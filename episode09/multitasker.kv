@@ -1,0 +1,106 @@
+<MyGrid>:
+
+    title1: title1
+    title2: title2
+    title3: title3
+    time1: time1
+    time2: time2
+    time3: time3
+    button1: button1
+    button2: button2
+    button3: button3
+    button1reset: button1reset
+    button2reset: button2reset
+    button3reset: button3reset
+    message: message
+    button_reset: button_reset
+
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height -200
+        pos: 100, 100
+
+        GridLayout:
+            cols:3
+
+            Label:
+                id: time1
+                size_hint_x: 1
+                text: str(round(root.number1))
+                font_size: 22
+
+            TextInput:
+                id: title1
+                size_hint_x: 5
+                multiline: True
+                font_size: 16
+
+            GridLayout:
+                cols:2
+                size_hint_x: 2
+
+                Button:
+                    id: button1
+                    text:"Start"
+                    on_press: root.btn1()
+
+                Button:
+                    id: button1reset
+                    text:"Reset"
+                    on_press: root.btn1_reset()
+
+            Label:
+                id: time2
+                text: str(round(root.number2))
+                font_size: 22
+
+            TextInput:
+                id: title2
+                multiline: True
+                font_size: 16
+
+            GridLayout:
+                cols:2
+                
+                Button:
+                    id: button2
+                    text:"Start"
+                    on_press: root.btn2()
+
+                Button:
+                    id: button2reset
+                    text:"Reset"
+                    on_press: root.btn2_reset()
+
+
+            Label:
+                id: time3
+                text: str(round(root.number3))
+                font_size: 22
+
+            TextInput:
+                id: title3
+                multiline: True
+                font_size: 16
+
+            GridLayout:
+                cols:2
+                
+                Button:
+                    id: button3
+                    text:"Start"
+                    on_press: root.btn3()
+
+                Button:
+                    id: button3reset
+                    text:"Reset"
+                    on_press: root.btn3_reset()
+
+        Label:
+            id: message
+            text: "Log messages here."
+
+        Button:
+            id: button_reset
+            text:"Click here to close the app."
+            on_press: root.btn_reset()
